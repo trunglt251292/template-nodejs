@@ -12,8 +12,7 @@ import favicon from 'serve-favicon';
 /**
  * Router variables
  */
-import routertest from "./routers/routerexam"
-import controllexam from "./controlls/controllexam";
+import routers from './api/routers/index';
 /**
  * Global variables
  */
@@ -47,10 +46,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 /**
  * API
  */
+app.use(routers);
 /**
  * Socket IO
  */
-routertest(app);
 /**
  * Socket IO
  */
