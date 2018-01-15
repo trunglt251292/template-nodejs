@@ -9,6 +9,7 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import path from "path";
 import favicon from 'serve-favicon';
+import socketEvents from './socketio/socket';
 /**
  * Router variables
  */
@@ -53,12 +54,7 @@ app.use(routers);
 /**
  * Socket IO
  */
- io.sockets.on('connection',(socket)=>{
-   console.log('Co nguoi ket noi bang socket : '+socket.id);
-   socket.on("disconnect",()=>{
- 		console.log(`${socket.id} da ngat ket noi Server`);
- 	});
- });
+socketEvents(io);
 /**
  * Setup Dev
  */
