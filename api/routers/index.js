@@ -1,6 +1,6 @@
 //quan ly routers
 import {Router} from 'express';
-import RouterExam from './routerexam';
+import RouterExam from './exam.router';
 
 const router = new Router();
 
