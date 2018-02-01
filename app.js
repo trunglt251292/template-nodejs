@@ -10,6 +10,7 @@ import morgan from "morgan";
 import path from "path";
 import favicon from 'serve-favicon';
 import socketEvents from './socketio/socket';
+import configs from './api/config';
 /**
  * Router variables
  */
@@ -61,8 +62,12 @@ socketEvents(io);
  server.listen(port,function(){
    console.log('Server dang hoat dong nhe!!!! port : '+port);
  });
-
- // server lang nghe
+ // Kue UI
+ import {queueUI} from './api/Queue';
+ queueUI.listen(configs.kueUI.port, function() {
+   console.log('Queue listening on port:' + configs.kueUI.port);
+ });
+ //server lang nghe
 
  server.on('error',onError);
  server.on('listening',onListening);

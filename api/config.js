@@ -29,12 +29,4 @@ export default {
   kueUI: {
     port: 3052
   },
-  googleOptions: {
-    clientID: '722078306328-mhkhrdvskqfm79m6q8l14aua7fjkdamb.apps.googleusercontent.com',
-    clientSecret: 'tbgJr7q7pRKacJCrhUkrjdCM'
-  },
-  facebookOptions: {
-    clientID: '773421079475077',
-    clientSecret: 'e8650409010002a548dc87700ca8732f'
-  }
 };
