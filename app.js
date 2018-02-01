@@ -26,14 +26,13 @@ const port = normalizePort(process.env.PORT || 3000);
 const server = http.createServer(app);
 const io = socketio.listen(server);
 
-/**
- * Database
-const url = <url database>
-mongoose.connect(url,(err)=>{
+
+mongoose.Promise = global.Promise;
+mongoose.connect(configs.mongoURL,(err)=>{
 	if(err)
 		console.log(err);
 	console.log('Da ket noi ket noi thanh cong!!!!');
-})*/
+})
 /**
  * Use, Set
  */
@@ -116,7 +115,8 @@ socketEvents(io);
        throw error;
    }
  }
-
+ //Worker
+ import * as Worker from './api/workers/index.workers';
  /**
   * Event listener for HTTP server "listening" event.
   */
