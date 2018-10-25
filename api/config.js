@@ -27,6 +27,6 @@ export default {
     redis: redisConfig
   },
   kueUI: {
-    port: 3052
+    port: 3053
   },
 };

@@ -3,7 +3,7 @@
  */
 import express from "express";
 import bodyParser from "body-parser";
-import fs from "fs";
+import fs from "fs"
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import morgan from "morgan";
@@ -26,7 +26,6 @@ const port = normalizePort(process.env.PORT || 3000);
 const server = http.createServer(app);
 const io = socketio.listen(server);
 
-
 mongoose.Promise = global.Promise;
 mongoose.connect(configs.mongoURL,(err)=>{
 	if(err)
@@ -47,7 +46,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 /**
  * API
  */
-app.use(routers);
+app.use('/api',routers);
 /**
  * Socket IO
  */
