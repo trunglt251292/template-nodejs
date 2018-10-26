@@ -25,6 +25,11 @@ const socketio = require('socket.io');
 const port = normalizePort(process.env.PORT || 3000);
 const server = http.createServer(app);
 const io = socketio.listen(server);
+// import model sql
+import {
+  Student,
+  Subject
+} from './api/models/index'
 
 mongoose.Promise = global.Promise;
 mongoose.connect(configs.mongoURL,(err)=>{
