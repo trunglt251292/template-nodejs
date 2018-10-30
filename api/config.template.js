@@ -25,17 +25,18 @@ const Sequelize = {
 export default {
   mongoURL: process.env.MONGO_URL || `mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`,
 
-  JWT_SECRET: 'gfgfhfh',
+  JWT_SECRET: '',
 
-  uploadPath: 'uploads',
+  uploadPath: '',
 
   useExpressStatic: true,
 
   kue: {
-    prefix: 'q',
+    prefix: '',
     redis: redisConfig
   },
   kueUI: {
     port: 3053
   },
+  projectId:''// google projectId. Before, you need export credentials. Example: "export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/{file}.json"
 };

@@ -40,6 +40,7 @@ export default {
     redis: redisConfig
   },
   kueUI: {
-    port: 3053
+    port: 3055
   },
+  projectId:'ancient-sandbox-219904'
 };
