@@ -10,7 +10,8 @@
     "build": "npm run clear && mkdir dist && babel *.js -s -d dist & babel lib/ -s -d dist/lib && babel models/ -s -d dist/models && babel controlls/ -s -d dist/controlls && babel routers/ -s -d dist/routers && babel views/ -s -d dist/views && cp -R ./bin dist/bin",
     "start:production": "pm2 start ./bin/dev",
     "stop:production": "pm2 flush && pm2 delete all",
-    "start:db": "DEBUG=* node ./bin/dev"
+    "start:db": "DEBUG=* node ./bin/dev",
+    "build:docker": "docker build -t node-example ."
   },
   "keywords": [],
   "author": "",

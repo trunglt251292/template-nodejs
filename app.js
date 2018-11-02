@@ -124,7 +124,7 @@ import * as Sub from './api/libs/PubSub_Cloud/subcription';
 // },1000);
 // setTimeout(()=>{
 //   Topic.publishMessage('test',{a:'asad'});
-Sub.listenForMessages('sub1',10000);
+// Sub.listenForMessages('sub1',10000);
 // },5000);
 // setTimeout(()=>{
 //   Sub.createSubscription('test','sub1');
